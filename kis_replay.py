@@ -791,6 +791,7 @@ for row in rows:
             f'{row["stck_cntg_hour"][:2]}:'
             f'{row["stck_cntg_hour"][2:4]}:'
             f'{row["stck_cntg_hour"][4:6]}'
+            f'+09:00'
         ),
 
 
@@ -838,7 +839,7 @@ for row in rows:
     # Serialization(직렬화):
     # Python 객체를 전송/저장 가능한 형태로 변환하는 것
     producer.produce(
-        topic="market-minute-events",
+        topic="market-minute-events-v2",
         key=STOCK_CODE,
         value=json.dumps(event)
     )

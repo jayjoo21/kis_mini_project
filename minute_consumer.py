@@ -90,12 +90,12 @@ def validate_event(event):
 
 consumer = Consumer({
     "bootstrap.servers": "localhost:9092",
-    "group.id": "market-minute-db-group-v2",
+    "group.id": "market-minute-db-group-v3",
     "auto.offset.reset": "earliest"
 })
 
 consumer.subscribe([
-    "market-minute-events"
+    "market-minute-events-v2"
 ])
 
 
