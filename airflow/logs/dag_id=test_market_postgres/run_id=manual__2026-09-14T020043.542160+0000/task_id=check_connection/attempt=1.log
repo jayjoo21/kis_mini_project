@@ -1,0 +1,13 @@
+{"timestamp":"2026-09-14T02:00:44.757644Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-09-14T02:00:44.759583Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/test_market_postgres.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-09-14T02:00:45.138079Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-09-14T02:00:45.140514Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-09-14T02:00:45.141463Z","level":"info","event":"Current task name:check_connection","logger":"task.stdout"}
+{"timestamp":"2026-09-14T02:00:45.142186Z","level":"info","event":"Dag name:test_market_postgres","logger":"task.stdout"}
+{"timestamp":"2026-09-14T02:00:45.193045Z","level":"info","event":"Running statement: \n            SELECT\n                current_database(),\n                current_user;\n            , parameters: None","logger":"airflow.task.hooks.airflow.providers.postgres.hooks.postgres.PostgresHook","filename":"sql.py","lineno":896}
+{"timestamp":"2026-09-14T02:00:50.455806Z","level":"info","event":"Rows affected: 1","logger":"airflow.task.hooks.airflow.providers.postgres.hooks.postgres.PostgresHook","filename":"sql.py","lineno":914}
+{"timestamp":"2026-09-14T02:00:50.458957Z","level":"info","event":"DB 연결 결과: ('marketdb', 'kafkauser')","logger":"task.stdout"}
+{"timestamp":"2026-09-14T02:00:50.459792Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":230}
+{"timestamp":"2026-09-14T02:00:50.490411Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-09-14T02:00:50.491596Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-09-14T02:00:50.492573Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): check_connection>","logger":"task.stdout"}

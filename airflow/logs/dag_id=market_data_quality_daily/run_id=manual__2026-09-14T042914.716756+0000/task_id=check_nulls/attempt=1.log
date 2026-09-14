@@ -1,0 +1,13 @@
+{"timestamp":"2026-09-14T04:29:23.617114Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-09-14T04:29:23.619496Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/market_data_quality_daily.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-09-14T04:29:23.796155Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-09-14T04:29:23.797466Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-09-14T04:29:23.798270Z","level":"info","event":"Current task name:check_nulls","logger":"task.stdout"}
+{"timestamp":"2026-09-14T04:29:23.799431Z","level":"info","event":"Dag name:market_data_quality_daily","logger":"task.stdout"}
+{"timestamp":"2026-09-14T04:29:23.831313Z","level":"info","event":"Running statement: \n            SELECT COUNT(*)\n            FROM market_price_events\n            WHERE\n                (\n                    symbol IS NULL\n                    OR price IS NULL\n                    OR volume IS NULL\n                    OR event_time IS NULL\n                )\n                AND\n                (\n                    ingested_at AT TIME ZONE 'Asia/Seoul'\n                )::date\n                =\n                (\n                    CURRENT_TIMESTAMP AT TIME ZONE 'Asia/Seoul'\n                )::date;\n            , parameters: None","logger":"airflow.task.hooks.airflow.providers.postgres.hooks.postgres.PostgresHook","filename":"sql.py","lineno":896}
+{"timestamp":"2026-09-14T04:29:26.295208Z","level":"info","event":"Rows affected: 1","logger":"airflow.task.hooks.airflow.providers.postgres.hooks.postgres.PostgresHook","filename":"sql.py","lineno":914}
+{"timestamp":"2026-09-14T04:29:26.298748Z","level":"info","event":"NULL 데이터 건수: 0","logger":"task.stdout"}
+{"timestamp":"2026-09-14T04:29:26.299295Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":230}
+{"timestamp":"2026-09-14T04:29:26.319265Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-09-14T04:29:26.320420Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-09-14T04:29:26.321049Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): check_nulls>","logger":"task.stdout"}

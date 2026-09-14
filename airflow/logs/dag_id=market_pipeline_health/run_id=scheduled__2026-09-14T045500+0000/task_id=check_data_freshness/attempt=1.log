@@ -1,0 +1,16 @@
+{"timestamp":"2026-09-14T04:56:18.638764Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-09-14T04:56:18.641069Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/market_pipeline_health.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-09-14T04:56:18.834759Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-09-14T04:56:18.839302Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-09-14T04:56:18.840390Z","level":"info","event":"Current task name:check_data_freshness","logger":"task.stdout"}
+{"timestamp":"2026-09-14T04:56:18.841732Z","level":"info","event":"Dag name:market_pipeline_health","logger":"task.stdout"}
+{"timestamp":"2026-09-14T04:56:18.843099Z","level":"info","event":"현재 한국시간: 2026-09-14 13:56:18.837992+09:00","logger":"task.stdout"}
+{"timestamp":"2026-09-14T04:56:18.886019Z","level":"info","event":"Running statement: \n            SELECT\n                MAX(ingested_at),\n\n                EXTRACT(\n                    EPOCH FROM (\n                        CURRENT_TIMESTAMP - MAX(ingested_at)\n                    )\n                )\n\n            FROM market_price_events;\n            , parameters: None","logger":"airflow.task.hooks.airflow.providers.postgres.hooks.postgres.PostgresHook","filename":"sql.py","lineno":896}
+{"timestamp":"2026-09-14T04:56:21.790919Z","level":"info","event":"Rows affected: 1","logger":"airflow.task.hooks.airflow.providers.postgres.hooks.postgres.PostgresHook","filename":"sql.py","lineno":914}
+{"timestamp":"2026-09-14T04:56:21.793812Z","level":"info","event":"최근 DB 적재 시각: 2026-09-14 04:56:18.846811+00:00","logger":"task.stdout"}
+{"timestamp":"2026-09-14T04:56:21.794710Z","level":"info","event":"마지막 적재 이후 경과 시간: 0.0초","logger":"task.stdout"}
+{"timestamp":"2026-09-14T04:56:21.795631Z","level":"info","event":"Freshness 정상","logger":"task.stdout"}
+{"timestamp":"2026-09-14T04:56:21.794376Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":230}
+{"timestamp":"2026-09-14T04:56:21.818383Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-09-14T04:56:21.819501Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-09-14T04:56:21.820303Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): check_data_freshness>","logger":"task.stdout"}

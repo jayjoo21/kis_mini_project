@@ -1,0 +1,8 @@
+{"timestamp":"2026-09-14T06:45:01.634277Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-09-14T06:45:01.637077Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/market_pipeline_health.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-09-14T06:45:01.903167Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-09-14T06:45:01.904879Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-09-14T06:45:01.905868Z","level":"info","event":"Current task name:check_data_freshness","logger":"task.stdout"}
+{"timestamp":"2026-09-14T06:45:01.906936Z","level":"info","event":"Dag name:market_pipeline_health","logger":"task.stdout"}
+{"timestamp":"2026-09-14T06:45:01.908101Z","level":"info","event":"현재 한국시간: 2026-09-14 15:45:01.906903+09:00","logger":"task.stdout"}
+{"timestamp":"2026-09-14T06:45:01.907313Z","level":"info","event":"Skipping task.","reason":"현재 시각 15:45:01.906903은정규장 운영시간(09:00~15:30)이 아닙니다","logger":"task","filename":"task_runner.py","lineno":1093}

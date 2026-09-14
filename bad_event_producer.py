@@ -10,11 +10,11 @@ producer = Producer({
 bad_event = {
     "symbol": "005930",
     "bar_time": "2026-09-10T20:00:00",
-    "open_price": 259000,
-    "high_price": 250000,
+    "open_price": 259000, 
+    "high_price": 250000, #high가 최고가가 될 수 없음
     "low_price": 258000,
     "close_price": 259500,
-    "volume": -100
+    "volume": -100 #거래량 음수
 }
 
 
